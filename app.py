@@ -50,7 +50,7 @@ def precipitation():
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
-    """Return a list of all passenger names"""
+    """Return a list of all all dates and precipitation"""
     # Perform a query to retrieve the data and precipitation scores
     results = session.query(measurement.date, measurement.prcp).filter(
         measurement.date >= '2016-08-23').filter(measurement.date <= '2017-08-23').all()
@@ -58,7 +58,7 @@ def precipitation():
     # close the session
     session.close()
 
-    # Create a dictionary from the row data and append to a list of all_passengers
+    # Create a dictionary from the row data and append to a list of all_measurements
     all_measurements = []
     for date, prcp in results:
         # create an empty object
@@ -77,8 +77,8 @@ def stations():
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
-    """Return a list of passenger data including the name, age, and sex of each passenger"""
-    # Query all passengers
+    """Return a list of stations"""
+    # Query all results
     results = session.query(measurement.station, func.count(measurement.station)).group_by(
         measurement.station).order_by(func.count(measurement.station).desc()).all()
 
@@ -130,11 +130,9 @@ def start_date(start):
         start_dict["max_temp"] = max
 
     start_date_calc.append(start_dict)
-    # start_calc = list(np.ravel(results))
 
     # return statement
     return jsonify(start_date_calc)
-    # return jsonify(start_calc)
 
 
 @app.route("/api/v1.0/<start_date>/<end_date>")
@@ -151,15 +149,15 @@ def start_and_end(start_date, end_date):
 
     end_date_calc = []
     for min, avg, max in results:
-
+        # create the empty object
         end_dict = {}
-
+# create the keys
         end_dict["min_temp"] = min
         end_dict["avg_temp"] = avg
         end_dict["max_temp"] = max
 
     end_date_calc.append(end_dict)
-
+# return statement
     return jsonify(end_date_calc)
 
 
