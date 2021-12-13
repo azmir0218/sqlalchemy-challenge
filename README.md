@@ -1,6 +1,6 @@
 # SQLAlchemy - Surfs Up!
 ## Objective
-To obtain Hawaii weather information for vacations purposes by performing basic climate analysis and data exploration using available climate database. 
+To obtain Hawaii weather information for vacation purposes by performing basic climate analysis and data exploration using available climate database. 
 
 ## Steps to complete:
 
