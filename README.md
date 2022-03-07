@@ -16,6 +16,8 @@ To obtain Hawaii weather information for vacation purposes by performing basic c
 
 * Using this date, retrieved the last 12 months of precipitation data by querying the 12 preceding months of data. Loaded the query results into a Pandas DataFrame and plotted the results using the DataFrame plot method. Printed the summary statistics for the precipitation data. 
 
+<img width="592" alt="Screen Shot 2021-10-28 at 6 29 10 PM" src="https://github.com/azmir0218/sqlalchemy-challenge/blob/main/Images/precipitation_by_date.png">
+
 ### Station Analysis
 * Designed various queries such as : query to calculate the total number of stations in the dataset, query to find the most active stations, query to retrieve the last 12 months of temperature observations. 
 * Plotted the results
