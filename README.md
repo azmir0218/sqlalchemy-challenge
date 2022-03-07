@@ -30,5 +30,7 @@ To obtain Hawaii weather information for vacation purposes by performing basic c
 * Was there a meaningful difference between the temperature in, for example, June and December? 
 * Used Pandas to perform data analysis on temperature across all available years in the dataset. 
 
+<img width="592" alt="Screen Shot 2021-10-28 at 6 29 10 PM" src="https://github.com/azmir0218/sqlalchemy-challenge/blob/main/Images/USC00519281_Obser_data_hist.png">
+
 ##Tools used:
 SQLAlchemy, Pandas, Matplotlib
